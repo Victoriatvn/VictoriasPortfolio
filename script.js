@@ -34,11 +34,42 @@ function setImage(id, src, alt) {
 
   const node = document.getElementById(id);
   if (node instanceof HTMLImageElement) {
-    node.src = src;
+    setImageSourceWithFallback(node, src);
     if (alt) {
       node.alt = alt;
     }
   }
+}
+
+function setImageSourceWithFallback(imageNode, src) {
+  const candidates = [];
+
+  function addCandidate(value) {
+    if (value && !candidates.includes(value)) {
+      candidates.push(value);
+    }
+  }
+
+  addCandidate(src);
+  addCandidate(src.replace(/\.jpg(\?.*)?$/i, ".JPG$1"));
+  addCandidate(src.replace(/\.jpeg(\?.*)?$/i, ".JPEG$1"));
+  addCandidate(src.replace(/\.jpg(\?.*)?$/i, ".jpeg$1"));
+  addCandidate(src.replace(/\.jpeg(\?.*)?$/i, ".jpg$1"));
+
+  let candidateIndex = 0;
+  function tryNextCandidate() {
+    if (candidateIndex >= candidates.length) {
+      imageNode.onerror = null;
+      return;
+    }
+
+    imageNode.src = candidates[candidateIndex];
+    candidateIndex += 1;
+  }
+
+  // Some assets may exist with uppercase extensions in git history.
+  imageNode.onerror = tryNextCandidate;
+  tryNextCandidate();
 }
 
 function createBulletList(items) {
@@ -68,7 +99,7 @@ function renderLogos(logos) {
     }
 
     const image = document.createElement("img");
-    image.src = logo.src;
+    setImageSourceWithFallback(image, logo.src);
     image.alt = logo.alt || "Company logo";
     image.className = logo.className || "logo-item";
     logoTrack.appendChild(image);
@@ -93,7 +124,7 @@ function renderJobs(jobs) {
 
     if (job?.image) {
       const image = document.createElement("img");
-      image.src = job.image;
+      setImageSourceWithFallback(image, job.image);
       image.alt = job.imageAlt || `${job.company || "Job"} media`;
       image.className = "job-media";
       card.appendChild(image);
@@ -138,7 +169,7 @@ function renderOrganizations(items) {
 
     if (item?.image) {
       const image = document.createElement("img");
-      image.src = item.image;
+      setImageSourceWithFallback(image, item.image);
       image.alt = item.imageAlt || `${item.name || "Organization"} media`;
       image.className = item.imageClass || "org-media";
       card.appendChild(image);
@@ -178,7 +209,7 @@ function renderGapPhotos(photos) {
     }
 
     const image = document.createElement("img");
-    image.src = photo.src;
+    setImageSourceWithFallback(image, photo.src);
     image.alt = photo.alt || "Gap year photo";
     image.className = "gap-photo";
     collage.appendChild(image);
