@@ -3,12 +3,12 @@
   "hero": {
     "eyebrow": "Portfolio",
     "title": "Building with purpose, leading with action.",
-    "intro": "I am Victoria Nguyen. I turn ideas into practical impact through hands-on work, leadership, and continuous growth.",
+    "intro": "Obsessed with Brands That Move People, Turning Data into Strategy and Ideas into Impact.",
     "linkedinUrl": "https://www.linkedin.com/in/victoria-nguyen695/",
     "resumePath": "assets/docs/resume.pdf",
     "email": "nguyent58@vcu.edu",
     "headshot": {
-      "src": "assets/media/headshots/headshot.jpeg",
+      "src": "/assets/media/headshots/headshot.jpeg",
       "alt": "Victoria Nguyen headshot"
     }
   },
@@ -65,7 +65,7 @@
       {
         "company": "Extern",
         "meta": "Partnerships Intern | Remote | Sept 2025 - Current",
-        "image": "assets/media/jobs/Extern.jpeg",
+        "image": "/assets/media/jobs/Extern.jpeg",
         "imageAlt": "Extern partnership internship media",
         "bullets": [
           "Owned full B2B sales cycle from prospecting to close, securing partnerships with L'Oreal, Amazon, and Pfizer projected to impact 1,500+ students globally.",
@@ -76,7 +76,7 @@
       {
         "company": "VCU Office of Innovation & Strategic Design",
         "meta": "Innovation & Strategic Design Fellow | Richmond, VA | Sept 2025 - Current",
-        "image": "assets/media/jobs/VCU.jpg",
+        "image": "/assets/media/jobs/VCU.jpg",
         "imageAlt": "VCU fellowship media",
         "bullets": [
           "Selected as an inaugural Da Vinci Center Fellow and helped build the foundation for a new innovation-to-industry fellowship model.",
@@ -87,7 +87,7 @@
       {
         "company": "L'Oreal",
         "meta": "Omnichannel Education & Sales Intern | New York City, NY | June 2025 - August 2025",
-        "image": "assets/media/jobs/Loreal.jpg",
+        "image": "/assets/media/jobs/Loreal.jpg",
         "imageAlt": "L'Oreal internship media",
         "bullets": [
           "Delivered competitive intelligence across 20+ beauty competitors to inform C-suite education strategy and national rollout decisions.",
@@ -98,7 +98,7 @@
       {
         "company": "AT&T",
         "meta": "Senior Associate Marketing Intern | Dallas, TX | May 2024 - August 2024",
-        "image": "assets/media/jobs/at&t.jpeg",
+        "image": "/assets/media/jobs/at&t.jpeg",
         "imageAlt": "AT&T internship media",
         "bullets": [
           "Developed KPI-based campaign recommendations using risk and financial analysis to improve ROI and optimize budget allocation.",
@@ -114,7 +114,7 @@
       {
         "name": "Alpha Kappa Psi Fraternity",
         "meta": "Executive President | Richmond, VA | May 2025 - Current",
-        "image": "assets/media/organizations/akpsi-eboard.jpeg",
+        "image": "/assets/media/organizations/akpsi-eboard.jpeg",
         "imageAlt": "Organization leadership media",
         "cardClass": "org-card org-card-akpsi",
         "imageClass": "org-media org-media-akpsi",
@@ -127,7 +127,7 @@
       {
         "name": "Student Managed Investment Portfolio (SMIP)",
         "meta": "Investment Analyst | Richmond, VA | March 2024 - Current",
-        "image": "assets/media/organizations/SMIP.jpg",
+        "image": "/assets/media/organizations/SMIP.jpg",
         "imageAlt": "SMIP organization media",
         "cardClass": "org-card",
         "imageClass": "org-media org-media-smip",
@@ -144,27 +144,27 @@
     "whatIDidTitle": "What I Did",
     "photos": [
       {
-        "src": "assets/media/gap-year/IMG_0014.jpg",
+        "src": "/assets/media/gap-year/IMG_0014.jpg",
         "alt": "Gap year memory 1"
       },
       {
-        "src": "assets/media/gap-year/IMG_0163.jpg",
+        "src": "/assets/media/gap-year/IMG_0163.jpg",
         "alt": "Gap year memory 2"
       },
       {
-        "src": "assets/media/gap-year/IMG_0636.jpeg",
+        "src": "/assets/media/gap-year/IMG_0636.jpeg",
         "alt": "Gap year memory 3"
       },
       {
-        "src": "assets/media/gap-year/IMG_4544.jpg",
+        "src": "/assets/media/gap-year/IMG_4544.jpg",
         "alt": "Gap year memory 4"
       },
       {
-        "src": "assets/media/gap-year/IMG_5676.png",
+        "src": "/assets/media/gap-year/IMG_5676.png",
         "alt": "Gap year memory 5"
       },
       {
-        "src": "assets/media/gap-year/IMG_5677.png",
+        "src": "/assets/media/gap-year/IMG_5677.png",
         "alt": "Gap year memory 6"
       }
     ],
