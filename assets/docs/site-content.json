@@ -102,11 +102,7 @@
         "imageAlt": "Organization leadership media",
         "cardClass": "org-card org-card-akpsi",
         "imageClass": "org-media org-media-akpsi",
-        "bullets": [
-          "Lead a 68-member professional business fraternity chapter and direct a 7-member executive board across operations, recruitment, alumni relations, and strategy.",
-          "Manage a $10,000 annual budget across professional development and philanthropy priorities.",
-          "Implemented recruitment initiatives that improved chapter recruitment outcomes by 40%."
-        ]
+        "blurb": "Lead a 68-member chapter and a 7-person executive board while managing a $10K budget and driving recruitment strategies that increased outcomes by 40%."
       },
       {
         "name": "Student Managed Investment Portfolio (SMIP)",
@@ -115,11 +111,7 @@
         "imageAlt": "SMIP organization media",
         "cardClass": "org-card",
         "imageClass": "org-media org-media-smip",
-        "bullets": [
-          "Perform company and sector analysis on Consumer Staples firms using Bloomberg and IBISWorld to inform decisions for a $415K portfolio.",
-          "Collaborate with a 40-analyst team to assess market conditions and identify opportunities.",
-          "Support weekly buy/sell pitch development with research-backed recommendations."
-        ]
+        "blurb": "Analyze consumer staples opportunities with Bloomberg and IBISWorld research and collaborate with a 40-analyst team to support decisions for a $415K portfolio."
       }
     ]
   },
@@ -152,11 +144,7 @@
         "alt": "Gap year memory 6"
       }
     ],
-    "highlights": [
-      "Traveled and gained global perspective through immersive cultural experiences.",
-      "Strengthened professional skills through networking, hands-on projects, and independent learning.",
-      "Built clarity around long-term goals by combining personal growth with career-focused action."
-    ]
+    "blurb": "Traveled internationally, built practical skills through independent projects and networking, and gained clear direction for long-term career goals."
   },
   "footer": {
     "contactEmail": "nguyent58@vcu.edu"

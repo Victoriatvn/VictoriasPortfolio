@@ -93,10 +93,9 @@ content:
               - name: imageAlt
                 label: Image Alt Text
                 type: string
-              - name: bullets
-                label: Bullet Points
-                type: string
-                list: true
+              - name: blurb
+                label: What I Did (Short Blurb)
+                type: text
       - name: organizations
         label: Organizations
         type: object
@@ -128,10 +127,9 @@ content:
               - name: imageClass
                 label: Image CSS Classes
                 type: string
-              - name: bullets
-                label: Bullet Points
-                type: string
-                list: true
+              - name: blurb
+                label: What I Did (Short Blurb)
+                type: text
       - name: gapYear
         label: Gap Year
         type: object
@@ -154,10 +152,9 @@ content:
               - name: alt
                 label: Alt Text
                 type: string
-          - name: highlights
-            label: Highlights
-            type: string
-            list: true
+          - name: blurb
+            label: What I Did (Short Blurb)
+            type: text
       - name: footer
         label: Footer
         type: object

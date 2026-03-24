@@ -86,16 +86,6 @@ function normalizeAssetPath(path) {
   return path;
 }
 
-function createBulletList(items) {
-  const list = document.createElement("ul");
-  items.forEach((item) => {
-    const li = document.createElement("li");
-    li.textContent = item;
-    list.appendChild(li);
-  });
-  return list;
-}
-
 function createJobBlurb(job) {
   if (typeof job?.blurb === "string" && job.blurb.trim().length > 0) {
     return job.blurb.trim();
@@ -103,6 +93,30 @@ function createJobBlurb(job) {
 
   if (Array.isArray(job?.bullets) && job.bullets.length > 0) {
     return job.bullets[0];
+  }
+
+  return "";
+}
+
+function createOrganizationBlurb(item) {
+  if (typeof item?.blurb === "string" && item.blurb.trim().length > 0) {
+    return item.blurb.trim();
+  }
+
+  if (Array.isArray(item?.bullets) && item.bullets.length > 0) {
+    return item.bullets[0];
+  }
+
+  return "";
+}
+
+function createGapYearBlurb(gapYear) {
+  if (typeof gapYear?.blurb === "string" && gapYear.blurb.trim().length > 0) {
+    return gapYear.blurb.trim();
+  }
+
+  if (Array.isArray(gapYear?.highlights) && gapYear.highlights.length > 0) {
+    return gapYear.highlights[0];
   }
 
   return "";
@@ -214,8 +228,12 @@ function renderOrganizations(items) {
     meta.textContent = item?.meta || "";
     card.appendChild(meta);
 
-    if (Array.isArray(item?.bullets) && item.bullets.length > 0) {
-      card.appendChild(createBulletList(item.bullets));
+    const blurb = createOrganizationBlurb(item);
+    if (blurb) {
+      const blurbNode = document.createElement("p");
+      blurbNode.className = "org-blurb";
+      blurbNode.textContent = blurb;
+      card.appendChild(blurbNode);
     }
 
     container.appendChild(card);
@@ -246,22 +264,13 @@ function renderGapPhotos(photos) {
   });
 }
 
-function renderGapHighlights(highlights) {
-  if (!Array.isArray(highlights)) {
+function renderGapBlurb(gapYear) {
+  const node = document.getElementById("gap-blurb");
+  if (!node) {
     return;
   }
 
-  const list = document.getElementById("gap-highlights");
-  if (!list) {
-    return;
-  }
-
-  list.replaceChildren();
-  highlights.forEach((highlight) => {
-    const item = document.createElement("li");
-    item.textContent = highlight;
-    list.appendChild(item);
-  });
+  node.textContent = createGapYearBlurb(gapYear);
 }
 
 function applyContent(content) {
@@ -294,7 +303,7 @@ function applyContent(content) {
   setText("gap-title", gapYear.title);
   setText("gap-what-title", gapYear.whatIDidTitle);
   renderGapPhotos(gapYear.photos);
-  renderGapHighlights(gapYear.highlights);
+  renderGapBlurb(gapYear);
 
   const footer = content.footer || {};
   setHref("footer-email", footer.contactEmail ? `mailto:${footer.contactEmail}` : "");

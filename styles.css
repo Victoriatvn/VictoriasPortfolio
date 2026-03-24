@@ -317,9 +317,9 @@ h2 {
   object-fit: cover;
 }
 
-.org-card ul {
+.org-blurb {
   margin: 0;
-  padding: 0 1rem 1rem 1.95rem;
+  padding: 0 1rem 1rem;
   color: var(--muted);
   line-height: 1.6;
 }
@@ -356,9 +356,8 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
-.gap-what ul {
+.gap-blurb {
   margin: 0;
-  padding-left: 1rem;
   color: var(--muted);
   line-height: 1.6;
 }
