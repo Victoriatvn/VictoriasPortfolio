@@ -96,6 +96,18 @@ function createBulletList(items) {
   return list;
 }
 
+function createJobBlurb(job) {
+  if (typeof job?.blurb === "string" && job.blurb.trim().length > 0) {
+    return job.blurb.trim();
+  }
+
+  if (Array.isArray(job?.bullets) && job.bullets.length > 0) {
+    return job.bullets[0];
+  }
+
+  return "";
+}
+
 function renderLogos(logos) {
   if (!Array.isArray(logos)) {
     return;
@@ -156,8 +168,12 @@ function renderJobs(jobs) {
     meta.textContent = job?.meta || "";
     body.appendChild(meta);
 
-    if (Array.isArray(job?.bullets) && job.bullets.length > 0) {
-      body.appendChild(createBulletList(job.bullets));
+    const blurb = createJobBlurb(job);
+    if (blurb) {
+      const blurbNode = document.createElement("p");
+      blurbNode.className = "job-blurb";
+      blurbNode.textContent = blurb;
+      body.appendChild(blurbNode);
     }
 
     card.appendChild(body);

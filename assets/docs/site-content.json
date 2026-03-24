@@ -67,44 +67,28 @@
         "meta": "Partnerships Intern | Remote | Sept 2025 - Current",
         "image": "/assets/media/jobs/Extern.jpeg",
         "imageAlt": "Extern partnership internship media",
-        "bullets": [
-          "Owned full B2B sales cycle from prospecting to close, securing partnerships with L'Oreal, Amazon, and Pfizer projected to impact 1,500+ students globally.",
-          "Managed brand accounts and high-volume LinkedIn/email outreach to drive account growth and quarterly business targets.",
-          "Explored AI-agent workflows for research, lead qualification, and outreach automation to scale outbound efficiency."
-        ]
+        "blurb": "Drove full-cycle partnership outreach and closed high-impact collaborations that expanded student access while improving outbound efficiency with AI-assisted workflows."
       },
       {
         "company": "VCU Office of Innovation & Strategic Design",
         "meta": "Innovation & Strategic Design Fellow | Richmond, VA | Sept 2025 - Current",
         "image": "/assets/media/jobs/VCU.jpg",
         "imageAlt": "VCU fellowship media",
-        "bullets": [
-          "Selected as an inaugural Da Vinci Center Fellow and helped build the foundation for a new innovation-to-industry fellowship model.",
-          "Led business development and digital outreach to support partnerships with Fortune 500 companies including L'Oreal, Keefe, and Wells Fargo.",
-          "Coordinated Design Jams and recruitment for interdisciplinary projects with VCU leadership, the Virginia Department of Accounts, and the Governor's Office of Transformation."
-        ]
+        "blurb": "Built and scaled a new innovation fellowship model by leading partner development, digital outreach, and cross-sector collaboration with university and state stakeholders."
       },
       {
         "company": "L'Oreal",
         "meta": "Omnichannel Education & Sales Intern | New York City, NY | June 2025 - August 2025",
         "image": "/assets/media/jobs/Loreal.jpeg",
         "imageAlt": "L'Oreal internship media",
-        "bullets": [
-          "Delivered competitive intelligence across 20+ beauty competitors to inform C-suite education strategy and national rollout decisions.",
-          "Managed accounts and vendor relationships, processing 600+ Salesforce transactions with 100% accuracy.",
-          "Built a DEI business case showing an 86% increase in customer engagement and recommending expansion to underserved NYC segments."
-        ]
+        "blurb": "Turned market intelligence and account operations into executive-ready recommendations that strengthened omnichannel strategy and expanded engagement in underserved segments."
       },
       {
         "company": "AT&T",
         "meta": "Senior Associate Marketing Intern | Dallas, TX | May 2024 - August 2024",
         "image": "/assets/media/jobs/at&t.jpeg",
         "imageAlt": "AT&T internship media",
-        "bullets": [
-          "Developed KPI-based campaign recommendations using risk and financial analysis to improve ROI and optimize budget allocation.",
-          "Created and produced a monthly Mid Markets newsletter to highlight updates, events, and CSR initiatives for internal engagement.",
-          "Synthesized campaign insights into stakeholder-ready recommendations to support marketing planning and execution."
-        ]
+        "blurb": "Translated campaign performance data into ROI-focused marketing recommendations and stakeholder communications that improved planning clarity and execution alignment."
       }
     ]
   },
