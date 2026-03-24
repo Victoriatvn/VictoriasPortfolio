@@ -23,7 +23,7 @@ function setHref(id, href) {
 
   const node = document.getElementById(id);
   if (node instanceof HTMLAnchorElement) {
-    node.href = normalizeAssetPath(href);
+    node.href = href;
   }
 }
 
@@ -34,92 +34,23 @@ function setImage(id, src, alt) {
 
   const node = document.getElementById(id);
   if (node instanceof HTMLImageElement) {
-    setImageSourceWithFallback(node, src);
+    node.src = src;
     if (alt) {
       node.alt = alt;
     }
   }
 }
 
-function setImageSourceWithFallback(imageNode, src) {
-  const normalizedSrc = normalizeAssetPath(src);
-  const candidates = [];
-
-  function addCandidate(value) {
-    if (value && !candidates.includes(value)) {
-      candidates.push(value);
-    }
-  }
-
-  addCandidate(normalizedSrc);
-  addCandidate(normalizedSrc.replace(/\.jpg(\?.*)?$/i, ".JPG$1"));
-  addCandidate(normalizedSrc.replace(/\.jpeg(\?.*)?$/i, ".JPEG$1"));
-  addCandidate(normalizedSrc.replace(/\.jpg(\?.*)?$/i, ".jpeg$1"));
-  addCandidate(normalizedSrc.replace(/\.jpeg(\?.*)?$/i, ".jpg$1"));
-
-  let candidateIndex = 0;
-  function tryNextCandidate() {
-    if (candidateIndex >= candidates.length) {
-      imageNode.onerror = null;
-      return;
-    }
-
-    imageNode.src = candidates[candidateIndex];
-    candidateIndex += 1;
-  }
-
-  // Some assets may exist with uppercase extensions in git history.
-  imageNode.onerror = tryNextCandidate;
-  tryNextCandidate();
-}
-
-function normalizeAssetPath(path) {
-  if (typeof path !== "string") {
-    return path;
-  }
-
-  // GitHub Pages project sites need relative asset paths.
-  if (path.startsWith("/assets/")) {
-    return path.slice(1);
-  }
-
-  return path;
-}
-
 function createJobBlurb(job) {
-  if (typeof job?.blurb === "string" && job.blurb.trim().length > 0) {
-    return job.blurb.trim();
-  }
-
-  if (Array.isArray(job?.bullets) && job.bullets.length > 0) {
-    return job.bullets[0];
-  }
-
-  return "";
+  return typeof job?.blurb === "string" ? job.blurb.trim() : "";
 }
 
 function createOrganizationBlurb(item) {
-  if (typeof item?.blurb === "string" && item.blurb.trim().length > 0) {
-    return item.blurb.trim();
-  }
-
-  if (Array.isArray(item?.bullets) && item.bullets.length > 0) {
-    return item.bullets[0];
-  }
-
-  return "";
+  return typeof item?.blurb === "string" ? item.blurb.trim() : "";
 }
 
 function createGapYearBlurb(gapYear) {
-  if (typeof gapYear?.blurb === "string" && gapYear.blurb.trim().length > 0) {
-    return gapYear.blurb.trim();
-  }
-
-  if (Array.isArray(gapYear?.highlights) && gapYear.highlights.length > 0) {
-    return gapYear.highlights[0];
-  }
-
-  return "";
+  return typeof gapYear?.blurb === "string" ? gapYear.blurb.trim() : "";
 }
 
 function renderLogos(logos) {
@@ -139,7 +70,7 @@ function renderLogos(logos) {
     }
 
     const image = document.createElement("img");
-    setImageSourceWithFallback(image, logo.src);
+    image.src = logo.src;
     image.alt = logo.alt || "Company logo";
     image.className = logo.className || "logo-item";
     logoTrack.appendChild(image);
@@ -164,7 +95,7 @@ function renderJobs(jobs) {
 
     if (job?.image) {
       const image = document.createElement("img");
-      setImageSourceWithFallback(image, job.image);
+      image.src = job.image;
       image.alt = job.imageAlt || `${job.company || "Job"} media`;
       image.className = "job-media";
       card.appendChild(image);
@@ -213,7 +144,7 @@ function renderOrganizations(items) {
 
     if (item?.image) {
       const image = document.createElement("img");
-      setImageSourceWithFallback(image, item.image);
+      image.src = item.image;
       image.alt = item.imageAlt || `${item.name || "Organization"} media`;
       image.className = item.imageClass || "org-media";
       card.appendChild(image);
@@ -257,7 +188,7 @@ function renderGapPhotos(photos) {
     }
 
     const image = document.createElement("img");
-    setImageSourceWithFallback(image, photo.src);
+    image.src = photo.src;
     image.alt = photo.alt || "Gap year photo";
     image.className = "gap-photo";
     collage.appendChild(image);

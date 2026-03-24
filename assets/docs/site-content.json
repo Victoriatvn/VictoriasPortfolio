@@ -8,7 +8,7 @@
     "resumePath": "assets/docs/resume.pdf",
     "email": "nguyent58@vcu.edu",
     "headshot": {
-      "src": "/assets/media/headshots/headshot.jpeg",
+      "src": "assets/media/headshots/headshot.jpeg",
       "alt": "Victoria Nguyen headshot"
     }
   },
@@ -65,28 +65,28 @@
       {
         "company": "Extern",
         "meta": "Partnerships Intern | Richmond, VA",
-        "image": "/assets/media/jobs/Extern.jpeg",
+        "image": "assets/media/jobs/Extern.jpeg",
         "imageAlt": "Extern partnership internship media",
         "blurb": "Drove full-cycle partnership outreach and closed high-impact collaborations that expanded student access while improving outbound efficiency with AI-assisted workflows."
       },
       {
         "company": "VCU Office of Innovation & Strategic Design",
         "meta": "Innovation & Strategic Design Fellow | Richmond, VA",
-        "image": "/assets/media/jobs/VCU.jpg",
+        "image": "assets/media/jobs/VCU.jpg",
         "imageAlt": "VCU fellowship media",
         "blurb": "Built and scaled a new innovation fellowship model by leading partner development, digital outreach, and cross-sector collaboration with university and state stakeholders."
       },
       {
         "company": "L'Oreal",
         "meta": "Omnichannel Education & Sales Intern | New York City, NY",
-        "image": "/assets/media/jobs/Loreal.jpeg",
+        "image": "assets/media/jobs/Loreal.jpeg",
         "imageAlt": "L'Oreal internship media",
         "blurb": "Turned market intelligence and account operations into executive-ready recommendations that strengthened omnichannel strategy and expanded engagement in underserved segments."
       },
       {
         "company": "AT&T",
         "meta": "Senior Associate Marketing Intern | Dallas, TX",
-        "image": "/assets/media/jobs/at&t.jpeg",
+        "image": "assets/media/jobs/at&t.jpeg",
         "imageAlt": "AT&T internship media",
         "blurb": "Translated campaign performance data into ROI-focused marketing recommendations and stakeholder communications that improved planning clarity and execution alignment."
       }
@@ -98,7 +98,7 @@
       {
         "name": "Alpha Kappa Psi Fraternity",
         "meta": "Executive President | Richmond, VA",
-        "image": "/assets/media/organizations/akpsi-eboard.jpeg",
+        "image": "assets/media/organizations/akpsi-eboard.jpeg",
         "imageAlt": "Organization leadership media",
         "cardClass": "org-card org-card-akpsi",
         "imageClass": "org-media org-media-akpsi",
@@ -107,7 +107,7 @@
       {
         "name": "Student Managed Investment Portfolio (SMIP)",
         "meta": "Investment Analyst | Richmond, VA",
-        "image": "/assets/media/organizations/SMIP.jpg",
+        "image": "assets/media/organizations/SMIP.jpg",
         "imageAlt": "SMIP organization media",
         "cardClass": "org-card",
         "imageClass": "org-media org-media-smip",
