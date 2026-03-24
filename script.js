@@ -23,7 +23,7 @@ function setHref(id, href) {
 
   const node = document.getElementById(id);
   if (node instanceof HTMLAnchorElement) {
-    node.href = href;
+    node.href = normalizeAssetPath(href);
   }
 }
 
@@ -42,6 +42,7 @@ function setImage(id, src, alt) {
 }
 
 function setImageSourceWithFallback(imageNode, src) {
+  const normalizedSrc = normalizeAssetPath(src);
   const candidates = [];
 
   function addCandidate(value) {
@@ -50,11 +51,11 @@ function setImageSourceWithFallback(imageNode, src) {
     }
   }
 
-  addCandidate(src);
-  addCandidate(src.replace(/\.jpg(\?.*)?$/i, ".JPG$1"));
-  addCandidate(src.replace(/\.jpeg(\?.*)?$/i, ".JPEG$1"));
-  addCandidate(src.replace(/\.jpg(\?.*)?$/i, ".jpeg$1"));
-  addCandidate(src.replace(/\.jpeg(\?.*)?$/i, ".jpg$1"));
+  addCandidate(normalizedSrc);
+  addCandidate(normalizedSrc.replace(/\.jpg(\?.*)?$/i, ".JPG$1"));
+  addCandidate(normalizedSrc.replace(/\.jpeg(\?.*)?$/i, ".JPEG$1"));
+  addCandidate(normalizedSrc.replace(/\.jpg(\?.*)?$/i, ".jpeg$1"));
+  addCandidate(normalizedSrc.replace(/\.jpeg(\?.*)?$/i, ".jpg$1"));
 
   let candidateIndex = 0;
   function tryNextCandidate() {
@@ -70,6 +71,19 @@ function setImageSourceWithFallback(imageNode, src) {
   // Some assets may exist with uppercase extensions in git history.
   imageNode.onerror = tryNextCandidate;
   tryNextCandidate();
+}
+
+function normalizeAssetPath(path) {
+  if (typeof path !== "string") {
+    return path;
+  }
+
+  // GitHub Pages project sites need relative asset paths.
+  if (path.startsWith("/assets/")) {
+    return path.slice(1);
+  }
+
+  return path;
 }
 
 function createBulletList(items) {
