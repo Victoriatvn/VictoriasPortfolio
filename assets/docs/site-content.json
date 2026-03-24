@@ -120,27 +120,27 @@
     "whatIDidTitle": "What I Did",
     "photos": [
       {
-        "src": "/assets/media/gap-year/IMG_0014.jpg",
+        "src": "assets/media/gap-year/IMG_0014.jpg",
         "alt": "Gap year memory 1"
       },
       {
-        "src": "/assets/media/gap-year/IMG_0163.jpg",
+        "src": "assets/media/gap-year/IMG_0163.jpg",
         "alt": "Gap year memory 2"
       },
       {
-        "src": "/assets/media/gap-year/IMG_0636.jpeg",
+        "src": "assets/media/gap-year/IMG_0636.jpeg",
         "alt": "Gap year memory 3"
       },
       {
-        "src": "/assets/media/gap-year/IMG_4544.jpg",
+        "src": "assets/media/gap-year/IMG_4544.jpg",
         "alt": "Gap year memory 4"
       },
       {
-        "src": "/assets/media/gap-year/IMG_5676.png",
+        "src": "assets/media/gap-year/IMG_5676.png",
         "alt": "Gap year memory 5"
       },
       {
-        "src": "/assets/media/gap-year/IMG_5677.png",
+        "src": "assets/media/gap-year/IMG_5677.png",
         "alt": "Gap year memory 6"
       }
     ],

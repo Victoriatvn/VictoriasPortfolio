@@ -2,12 +2,12 @@ media:
   - name: images
     label: Images
     input: assets/media
-    output: /assets/media
+    output: assets/media
     categories: [image]
   - name: docs
     label: Documents
     input: assets/docs
-    output: /assets/docs
+    output: assets/docs
     categories: [document]
 
 content:
