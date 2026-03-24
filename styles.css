@@ -1,0 +1,502 @@
+:root {
+  --bg: #f4f9ff;
+  --surface: #ffffff;
+  --surface-2: #eaf4ff;
+  --primary: #0d4fd8;
+  --primary-deep: #08348f;
+  --text: #12213f;
+  --muted: #4f658f;
+  --line: #cddcf3;
+  --shadow: 0 16px 40px rgba(13, 79, 216, 0.12);
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 15% 20%, rgba(13, 79, 216, 0.16), transparent 42%),
+    radial-gradient(circle at 85% 5%, rgba(8, 52, 143, 0.14), transparent 32%),
+    linear-gradient(160deg, #f7fbff 0%, #edf5ff 45%, #f4f9ff 100%);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 4vw;
+  backdrop-filter: blur(8px);
+  background: rgba(244, 249, 255, 0.74);
+  animation: fade-in 800ms ease forwards;
+}
+
+.brand {
+  font-family: "Lora", serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.top-nav nav {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.top-nav nav a {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.top-nav nav a:hover {
+  color: var(--primary-deep);
+}
+
+main,
+.subpage {
+  width: min(1320px, 96vw);
+  margin: 0 auto;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 4rem 0 2rem;
+  animation: fade-in-up 900ms ease forwards;
+}
+
+.eyebrow {
+  font-family: "Source Sans 3", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.76rem;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+h1 {
+  font-family: "Lora", serif;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  margin-bottom: 0.8rem;
+}
+
+h2 {
+  font-family: "Lora", serif;
+  font-size: clamp(1.45rem, 2.5vw, 2rem);
+  margin-bottom: 0.6rem;
+}
+
+.hero-copy p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.2rem;
+}
+
+.btn {
+  border-radius: 999px;
+  padding: 0.64rem 1.1rem;
+  font-weight: 700;
+  font-size: 0.93rem;
+  transition: transform 160ms ease, box-shadow 220ms ease, background-color 160ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, #2f7aff 100%);
+  color: #fff;
+  box-shadow: 0 8px 26px rgba(13, 79, 216, 0.26);
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--primary-deep);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--primary-deep);
+}
+
+.hero-photo-wrap {
+  justify-self: center;
+  width: min(360px, 90%);
+  border-radius: 28px;
+  padding: 0.8rem;
+  background: linear-gradient(145deg, rgba(13, 79, 216, 0.19), rgba(13, 79, 216, 0.03));
+  box-shadow: var(--shadow);
+}
+
+.hero-photo {
+  width: 100%;
+  border-radius: 22px;
+  display: block;
+}
+
+.section {
+  padding: 2.6rem 0;
+  scroll-margin-top: 80px;
+}
+
+.section-intro {
+  color: var(--muted);
+  margin-bottom: 1.1rem;
+}
+
+.logo-train {
+  width: 100%;
+  margin: 0.9rem 0 1rem;
+}
+
+.logo-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  width: 100%;
+}
+
+.logo-item {
+  width: auto;
+  height: 28px;
+  max-width: 94px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.logo-item-fcps,
+.logo-item-wellsfargo {
+  height: 34px;
+  max-width: 120px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+#experience .card-grid {
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  gap: 0.85rem;
+}
+
+.two-column {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(13, 79, 216, 0.06);
+}
+
+.job-card ul {
+  margin: 0;
+  padding-left: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.job-card .card-body {
+  padding-left: 0.85rem;
+  padding-right: 0.85rem;
+}
+
+.job-card h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  margin-top: 0.95rem;
+  margin-bottom: 0.55rem;
+}
+
+.org-card h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.card-body,
+.card > p,
+.card > h3,
+.card > .meta {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.card-body {
+  padding-bottom: 1rem;
+}
+
+.card > h3 {
+  padding-top: 1rem;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.media-slot {
+  min-height: 176px;
+  display: grid;
+  place-items: center;
+  color: #4266a7;
+  font-weight: 700;
+  background:
+    linear-gradient(145deg, rgba(13, 79, 216, 0.14), rgba(13, 79, 216, 0.05)),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4) 10px,
+      rgba(234, 244, 255, 0.7) 10px,
+      rgba(234, 244, 255, 0.7) 20px
+    );
+}
+
+.job-card .media-slot {
+  min-height: 144px;
+}
+
+.job-media {
+  width: 100%;
+  height: 144px;
+  object-fit: cover;
+  display: block;
+}
+
+.org-media {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.org-media-akpsi {
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center 5%;
+}
+
+.org-media-smip {
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.org-card ul {
+  margin: 0;
+  padding: 0 1rem 1rem 1.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.gap-year-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.4rem;
+  align-items: start;
+}
+
+.gap-collage {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: 110px;
+  gap: 0.5rem;
+}
+
+.gap-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.gap-what {
+  background: var(--surface-2);
+  border-radius: 14px;
+  padding: 1.2rem;
+}
+
+.gap-what h3 {
+  margin-bottom: 0.5rem;
+}
+
+.gap-what ul {
+  margin: 0;
+  padding-left: 1rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.subpage {
+  padding: 4rem 0 2.4rem;
+}
+
+.subpage p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.site-footer {
+  width: min(1080px, 92vw);
+  margin: 2.4rem auto 1.1rem;
+  padding-top: 1.1rem;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: reveal-up 600ms ease forwards;
+}
+
+.section.reveal:nth-of-type(2) {
+  animation-delay: 80ms;
+}
+
+.section.reveal:nth-of-type(3) {
+  animation-delay: 140ms;
+}
+
+.section.reveal:nth-of-type(4) {
+  animation-delay: 200ms;
+}
+
+@keyframes reveal-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 700px) {
+  .logo-track {
+    gap: 1.2rem;
+  }
+
+  .logo-item {
+    height: 22px;
+    max-width: 68px;
+  }
+
+  .logo-item-fcps,
+  .logo-item-wellsfargo {
+    height: 26px;
+    max-width: 86px;
+  }
+}
+
+@media (max-width: 980px) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .hero-photo-wrap {
+    max-width: 320px;
+    justify-self: start;
+  }
+
+  .gap-year-container {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .top-nav {
+    gap: 0.7rem;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .card-grid,
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 2.4rem;
+  }
+
+  .gap-year-container {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .gap-collage {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 100px;
+  }
+}

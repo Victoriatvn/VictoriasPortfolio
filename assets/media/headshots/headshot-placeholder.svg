@@ -1,0 +1,14 @@
+<svg width="800" height="960" viewBox="0 0 800 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="40" y1="40" x2="760" y2="920" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D4FD8" />
+      <stop offset="1" stop-color="#A4C5FF" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="960" rx="40" fill="url(#bg)" />
+  <circle cx="400" cy="340" r="150" fill="#EAF4FF" fill-opacity="0.95" />
+  <path d="M180 830C180 696.311 288.311 588 422 588H378C511.689 588 620 696.311 620 830V880H180V830Z" fill="#EAF4FF" fill-opacity="0.95" />
+  <text x="400" y="110" text-anchor="middle" fill="#EAF4FF" font-family="Arial, sans-serif" font-size="42" font-weight="700">
+    Add Your Headshot
+  </text>
+</svg>

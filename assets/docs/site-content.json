@@ -1,0 +1,180 @@
+{
+  "siteName": "Victoria Nguyen",
+  "hero": {
+    "eyebrow": "Portfolio",
+    "title": "Building with purpose, leading with action.",
+    "intro": "I am Victoria Nguyen. I turn ideas into practical impact through hands-on work, leadership, and continuous growth.",
+    "linkedinUrl": "https://www.linkedin.com/in/victoria-nguyen695/",
+    "resumePath": "assets/docs/resume.pdf",
+    "email": "nguyent58@vcu.edu",
+    "headshot": {
+      "src": "assets/media/headshots/headshot.jpeg",
+      "alt": "Victoria Nguyen headshot"
+    }
+  },
+  "experience": {
+    "title": "Work Experience",
+    "logos": [
+      {
+        "src": "assets/logo-train/AT&T.svg",
+        "alt": "AT&T logo",
+        "className": "logo-item"
+      },
+      {
+        "src": "assets/logo-train/Amazon.png",
+        "alt": "Amazon logo",
+        "className": "logo-item"
+      },
+      {
+        "src": "assets/logo-train/Fairfax_County_Public_Schools_Logo.png",
+        "alt": "Fairfax County Public Schools logo",
+        "className": "logo-item logo-item-fcps"
+      },
+      {
+        "src": "assets/logo-train/Keefe.png",
+        "alt": "Keefe logo",
+        "className": "logo-item"
+      },
+      {
+        "src": "assets/logo-train/LOreal.png",
+        "alt": "L'Oreal logo",
+        "className": "logo-item"
+      },
+      {
+        "src": "assets/logo-train/LISBON.png",
+        "alt": "Lisbon logo",
+        "className": "logo-item"
+      },
+      {
+        "src": "assets/logo-train/Pfizer.svg",
+        "alt": "Pfizer logo",
+        "className": "logo-item"
+      },
+      {
+        "src": "assets/logo-train/VCU_daVinci_logo_full.webp",
+        "alt": "VCU da Vinci logo",
+        "className": "logo-item"
+      },
+      {
+        "src": "assets/logo-train/WellsFargoo.png",
+        "alt": "Wells Fargo logo",
+        "className": "logo-item logo-item-wellsfargo"
+      }
+    ],
+    "jobs": [
+      {
+        "company": "Extern",
+        "meta": "Partnerships Intern | Remote | Sept 2025 - Current",
+        "image": "assets/media/jobs/Extern.jpeg",
+        "imageAlt": "Extern partnership internship media",
+        "bullets": [
+          "Owned full B2B sales cycle from prospecting to close, securing partnerships with L'Oreal, Amazon, and Pfizer projected to impact 1,500+ students globally.",
+          "Managed brand accounts and high-volume LinkedIn/email outreach to drive account growth and quarterly business targets.",
+          "Explored AI-agent workflows for research, lead qualification, and outreach automation to scale outbound efficiency."
+        ]
+      },
+      {
+        "company": "VCU Office of Innovation & Strategic Design",
+        "meta": "Innovation & Strategic Design Fellow | Richmond, VA | Sept 2025 - Current",
+        "image": "assets/media/jobs/VCU.jpg",
+        "imageAlt": "VCU fellowship media",
+        "bullets": [
+          "Selected as an inaugural Da Vinci Center Fellow and helped build the foundation for a new innovation-to-industry fellowship model.",
+          "Led business development and digital outreach to support partnerships with Fortune 500 companies including L'Oreal, Keefe, and Wells Fargo.",
+          "Coordinated Design Jams and recruitment for interdisciplinary projects with VCU leadership, the Virginia Department of Accounts, and the Governor's Office of Transformation."
+        ]
+      },
+      {
+        "company": "L'Oreal",
+        "meta": "Omnichannel Education & Sales Intern | New York City, NY | June 2025 - August 2025",
+        "image": "assets/media/jobs/Loreal.JPG",
+        "imageAlt": "L'Oreal internship media",
+        "bullets": [
+          "Delivered competitive intelligence across 20+ beauty competitors to inform C-suite education strategy and national rollout decisions.",
+          "Managed accounts and vendor relationships, processing 600+ Salesforce transactions with 100% accuracy.",
+          "Built a DEI business case showing an 86% increase in customer engagement and recommending expansion to underserved NYC segments."
+        ]
+      },
+      {
+        "company": "AT&T",
+        "meta": "Senior Associate Marketing Intern | Dallas, TX | May 2024 - August 2024",
+        "image": "assets/media/jobs/at&t.jpeg",
+        "imageAlt": "AT&T internship media",
+        "bullets": [
+          "Developed KPI-based campaign recommendations using risk and financial analysis to improve ROI and optimize budget allocation.",
+          "Created and produced a monthly Mid Markets newsletter to highlight updates, events, and CSR initiatives for internal engagement.",
+          "Synthesized campaign insights into stakeholder-ready recommendations to support marketing planning and execution."
+        ]
+      }
+    ]
+  },
+  "organizations": {
+    "title": "Organizations & Leadership",
+    "items": [
+      {
+        "name": "Alpha Kappa Psi Fraternity",
+        "meta": "Executive President | Richmond, VA | May 2025 - Current",
+        "image": "assets/media/organizations/akpsi-eboard.jpeg",
+        "imageAlt": "Organization leadership media",
+        "cardClass": "org-card org-card-akpsi",
+        "imageClass": "org-media org-media-akpsi",
+        "bullets": [
+          "Lead a 68-member professional business fraternity chapter and direct a 7-member executive board across operations, recruitment, alumni relations, and strategy.",
+          "Manage a $10,000 annual budget across professional development and philanthropy priorities.",
+          "Implemented recruitment initiatives that improved chapter recruitment outcomes by 40%."
+        ]
+      },
+      {
+        "name": "Student Managed Investment Portfolio (SMIP)",
+        "meta": "Investment Analyst | Richmond, VA | March 2024 - Current",
+        "image": "assets/media/organizations/SMIP.jpg",
+        "imageAlt": "SMIP organization media",
+        "cardClass": "org-card",
+        "imageClass": "org-media org-media-smip",
+        "bullets": [
+          "Perform company and sector analysis on Consumer Staples firms using Bloomberg and IBISWorld to inform decisions for a $415K portfolio.",
+          "Collaborate with a 40-analyst team to assess market conditions and identify opportunities.",
+          "Support weekly buy/sell pitch development with research-backed recommendations."
+        ]
+      }
+    ]
+  },
+  "gapYear": {
+    "title": "Gap Year Journey",
+    "whatIDidTitle": "What I Did",
+    "photos": [
+      {
+        "src": "assets/media/gap-year/IMG_0014.JPG",
+        "alt": "Gap year memory 1"
+      },
+      {
+        "src": "assets/media/gap-year/IMG_0163.JPG",
+        "alt": "Gap year memory 2"
+      },
+      {
+        "src": "assets/media/gap-year/IMG_0636.jpeg",
+        "alt": "Gap year memory 3"
+      },
+      {
+        "src": "assets/media/gap-year/IMG_4544.JPG",
+        "alt": "Gap year memory 4"
+      },
+      {
+        "src": "assets/media/gap-year/IMG_5676.png",
+        "alt": "Gap year memory 5"
+      },
+      {
+        "src": "assets/media/gap-year/IMG_5677.png",
+        "alt": "Gap year memory 6"
+      }
+    ],
+    "highlights": [
+      "Traveled and gained global perspective through immersive cultural experiences.",
+      "Strengthened professional skills through networking, hands-on projects, and independent learning.",
+      "Built clarity around long-term goals by combining personal growth with career-focused action."
+    ]
+  },
+  "footer": {
+    "contactEmail": "nguyent58@vcu.edu"
+  }
+}
