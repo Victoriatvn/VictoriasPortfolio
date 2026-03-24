@@ -1,0 +1,167 @@
+media:
+  - name: images
+    label: Images
+    input: assets/media
+    output: /assets/media
+    categories: [image]
+  - name: docs
+    label: Documents
+    input: assets/docs
+    output: /assets/docs
+    categories: [document]
+
+content:
+  - name: siteContent
+    label: Site Content
+    type: file
+    path: assets/docs/site-content.json
+    fields:
+      - name: siteName
+        label: Site Name
+        type: string
+      - name: hero
+        label: Hero Section
+        type: object
+        fields:
+          - name: eyebrow
+            label: Eyebrow
+            type: string
+          - name: title
+            label: Hero Title
+            type: string
+          - name: intro
+            label: Intro Paragraph
+            type: text
+          - name: linkedinUrl
+            label: LinkedIn URL
+            type: string
+          - name: resumePath
+            label: Resume File
+            type: file
+            media: docs
+          - name: email
+            label: Email
+            type: string
+          - name: headshot
+            label: Headshot
+            type: object
+            fields:
+              - name: src
+                label: Image
+                type: image
+                media: images
+              - name: alt
+                label: Alt Text
+                type: string
+      - name: experience
+        label: Work Experience
+        type: object
+        fields:
+          - name: title
+            label: Section Title
+            type: string
+          - name: logos
+            label: Logos
+            type: object
+            list: true
+            fields:
+              - name: src
+                label: Logo Image
+                type: image
+                media: images
+              - name: alt
+                label: Alt Text
+                type: string
+              - name: className
+                label: CSS Classes
+                type: string
+          - name: jobs
+            label: Jobs
+            type: object
+            list: true
+            fields:
+              - name: company
+                label: Company
+                type: string
+              - name: meta
+                label: Meta Line
+                type: string
+              - name: image
+                label: Card Image
+                type: image
+                media: images
+              - name: imageAlt
+                label: Image Alt Text
+                type: string
+              - name: bullets
+                label: Bullet Points
+                type: string
+                list: true
+      - name: organizations
+        label: Organizations
+        type: object
+        fields:
+          - name: title
+            label: Section Title
+            type: string
+          - name: items
+            label: Organization Cards
+            type: object
+            list: true
+            fields:
+              - name: name
+                label: Organization Name
+                type: string
+              - name: meta
+                label: Meta Line
+                type: string
+              - name: image
+                label: Card Image
+                type: image
+                media: images
+              - name: imageAlt
+                label: Image Alt Text
+                type: string
+              - name: cardClass
+                label: Card CSS Classes
+                type: string
+              - name: imageClass
+                label: Image CSS Classes
+                type: string
+              - name: bullets
+                label: Bullet Points
+                type: string
+                list: true
+      - name: gapYear
+        label: Gap Year
+        type: object
+        fields:
+          - name: title
+            label: Section Title
+            type: string
+          - name: whatIDidTitle
+            label: Right Column Heading
+            type: string
+          - name: photos
+            label: Photos
+            type: object
+            list: true
+            fields:
+              - name: src
+                label: Photo
+                type: image
+                media: images
+              - name: alt
+                label: Alt Text
+                type: string
+          - name: highlights
+            label: Highlights
+            type: string
+            list: true
+      - name: footer
+        label: Footer
+        type: object
+        fields:
+          - name: contactEmail
+            label: Contact Email
+            type: string
