@@ -1,5 +1,5 @@
 const CONTENT_PATH = "assets/docs/site-content.json";
-const CONTENT_CACHE_KEY = "victoria-portfolio-content-v1";
+const CONTENT_CACHE_KEY = "victoria-portfolio-content-v2";
 
 const yearNode = document.getElementById("year");
 if (yearNode) {
@@ -269,7 +269,15 @@ function cacheContent(content) {
 }
 
 async function loadSiteContent() {
-  const cachedContent = readCachedContent();
+  const isLocalFilePreview = window.location.protocol === "file:";
+  const cachedContent = isLocalFilePreview ? null : readCachedContent();
+
+  if (isLocalFilePreview) {
+    console.warn(
+      "Local file preview detected. CMS content may not load from file:// URLs. Use a local server for accurate preview.",
+    );
+  }
+
   if (cachedContent) {
     applyContent(cachedContent);
   }
@@ -282,11 +290,30 @@ async function loadSiteContent() {
 
     const content = await response.json();
     applyContent(content);
-    cacheContent(content);
+    if (!isLocalFilePreview) {
+      cacheContent(content);
+    }
   } catch (error) {
     if (cachedContent) {
       console.warn("Could not load CMS content file. Using cached content instead.", error);
       return;
+    }
+
+    if (isLocalFilePreview) {
+      setText("hero-title", "Local preview mode cannot load CMS content.");
+      setText(
+        "hero-intro",
+        "Open the site with a local server (for example: python3 -m http.server) to load assets/docs/site-content.json.",
+      );
+      setText("experience-title", "");
+      setText("organizations-title", "");
+      setText("gap-title", "");
+      setText("gap-what-title", "");
+      renderLogos([]);
+      renderJobs([]);
+      renderOrganizations([]);
+      renderGapPhotos([]);
+      renderGapBlurb({ blurb: "" });
     }
 
     console.warn("Using fallback inline content. Could not load CMS content file.", error);
