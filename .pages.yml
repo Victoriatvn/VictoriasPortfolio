@@ -9,6 +9,7 @@ media:
     input: assets/docs
     output: assets/docs
     categories: [document]
+    extensions: [pdf, doc, docx]
 
 content:
   - name: siteContent
@@ -37,7 +38,7 @@ content:
             type: string
           - name: resumePath
             label: Resume File
-            type: file
+            type: document
             media: docs
           - name: email
             label: Email

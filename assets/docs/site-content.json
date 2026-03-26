@@ -1,9 +1,9 @@
 {
   "siteName": "Victoria Nguyen",
   "hero": {
-    "eyebrow": " ",
-    "title": "Turning Data into Strategy and Ideas into Impact.",
-    "intro": "I've never really done things on the typical timeline and I believe that's my greatest asset.\n \nI skipped a grade, graduated at 16, and spent my gap year traveling and volunteering before I ever set foot in a college classroom. I have always moved with ambition, but never without intention. Since then, I have not stopped. Every summer I have shown up somewhere new: a different state, a different country, a different industry. Dallas, New York City, Portugal. Each experience made me sharper, more adaptable, and more confident in rooms I had never been in before.\n \nAt VCU I study Marketing, Data Analytics, and Sales, but my real education has happened in the work itself. I am obsessed with brands that make people feel something and partnerships that create real mutual value, and that combination of sales instinct and marketing curiosity is what drives me.",
+    "eyebrow": "Portfolio",
+    "title": "Obsessed with Brands That Move People, Turning Data into Strategy and Ideas into Impact.",
+    "intro": "I've never really done things on the typical timeline and I think that's my greatest asset.\nBefore I ever set foot in a college classroom, I was already out in the world. I skipped a grade, graduated at 16, and spent my gap year traveling and volunteering, collecting experiences and perspectives that no degree could have given me. I have always moved with ambition, but never without intention.\nSince then, I have not stopped. Every single summer, whether it was a job or volunteering, I have shown up somewhere new. A different state, a different country, a different industry. Dallas with AT&T. New York City with L'Oréal. Portugal on an academic program. Each experience added a new lens and made me sharper, more adaptable, and more confident in rooms I had never been in before.\nWhen I got to VCU I hit the ground running. I study Marketing, Data Analytics, and Sales, but my real education has happened in the work itself: building partnerships with Fortune 500 companies, helping launch a fellowship from the ground up, and leading a 68-member organization as Executive President.\nI am obsessed with brands that make people feel something and partnerships that create real mutual value. I care about the strategy behind the story, who we are talking to, why it matters, and how to make it land. That combination of sales instinct and marketing curiosity is what drives me.",
     "linkedinUrl": "https://www.linkedin.com/in/victoria-nguyen695/",
     "resumePath": "assets/docs/resume.pdf",
     "email": "nguyent58@vcu.edu",
@@ -12,8 +12,9 @@
       "alt": "Victoria Nguyen headshot"
     }
   },
-  "experience": {
-    "title": "Work Experience",
+  "about": {
+    "title": "About Me",
+    "text": "I am Victoria Nguyen, a business student and builder focused on turning strategy into practical execution through partnerships, marketing, and leadership.",
     "logos": [
       {
         "src": "assets/logo-train/AT&T.svg",
@@ -60,35 +61,38 @@
         "alt": "Wells Fargo logo",
         "className": "logo-item logo-item-wellsfargo"
       }
-    ],
+    ]
+  },
+  "experience": {
+    "title": "Work Experience",
     "jobs": [
       {
         "company": "Extern",
         "meta": "Partnerships Intern | Richmond, VA",
         "image": "assets/media/jobs/Extern.jpeg",
         "imageAlt": "Extern partnership internship media",
-        "blurb": "At Extern, I drive the full partnership sales cycle from prospecting to close, independently securing strategic collaborations with major global brands. I cultivate a high volume of client relationships through LinkedIn and email outreach, focused on accelerating account growth and hitting quarterly goals. I also pioneer AI agent workflows to sharpen outbound efficiency, building smarter systems for research, lead qualification, and outreach."
+        "blurb": "Drove full-cycle partnership outreach and closed high-impact collaborations that expanded student access while improving outbound efficiency with AI-assisted workflows."
       },
       {
         "company": "VCU Office of Innovation & Strategic Design",
         "meta": "Innovation & Strategic Design Fellow | Richmond, VA",
         "image": "assets/media/jobs/VCU.jpg",
         "imageAlt": "VCU fellowship media",
-        "blurb": "As the inaugural Innovation and Strategic Design Fellow at VCU's Da Vinci Center, I am architecting a brand new fellowship program from the ground up. I spearhead business development through digital marketing campaigns and targeted outreach to forge partnerships with Fortune 500 companies. I also orchestrate Design Jams and lead recruitment efforts, connecting students with university leadership and state government stakeholders."
+        "blurb": "Built and scaled a new innovation fellowship model by leading partner development, digital outreach, and cross-sector collaboration with university and state stakeholders."
       },
       {
         "company": "L'Oreal",
         "meta": "Omnichannel Education & Sales Intern | New York City, NY",
         "image": "assets/media/jobs/Loreal.jpeg",
         "imageAlt": "L'Oreal internship media",
-        "blurb": "I spearheaded comprehensive competitive intelligence research across the beauty industry, dissecting product offerings, pricing strategies, and market positioning to shape executive-level strategy decisions. I stewarded vendor relationships and drove account operations through Salesforce CRM, and crafted a DEI business case study that championed strategic expansion into underserved market segments."
+        "blurb": "Turned market intelligence and account operations into executive-ready recommendations that strengthened omnichannel strategy and expanded engagement in underserved segments."
       },
       {
         "company": "AT&T",
         "meta": "Senior Associate Marketing Intern | Dallas, TX",
         "image": "assets/media/jobs/at&t.jpeg",
         "imageAlt": "AT&T internship media",
-        "blurb": "I engineered data-driven campaign recommendations using KPI analysis and financial projections to sharpen budget allocation and maximize ROI. I also conceived and produced the monthly newsletter for AT&T's Mid Markets division, covering company updates, events, and corporate social responsibility initiatives to unite internal teams and drive awareness."
+        "blurb": "Translated campaign performance data into ROI-focused marketing recommendations and stakeholder communications that improved planning clarity and execution alignment."
       }
     ]
   },
@@ -144,7 +148,7 @@
         "alt": "Gap year memory 6"
       }
     ],
-    "blurb": "Before college, I spent a year living in Hawaii and Colombia, volunteering and working with local organizations to give back to the communities that welcomed me. In Hawaii, I participated in beach and trail cleanups, working alongside conservation groups to preserve the natural spaces that locals and visitors depend on. In Colombia, I taught English through community education programs, helping open doors for people in communities where language access makes a real difference. That year taught me how to connect with people from all walks of life, how to show up for something bigger than yourself, and how to find purpose in the everyday effort of building something good. It is not something I talk about often, but it shaped who I am more than I can put into words."
+    "blurb": "Traveled internationally, built practical skills through independent projects and networking, and gained clear direction for long-term career goals."
   },
   "footer": {
     "contactEmail": "nguyent58@vcu.edu"
