@@ -1,4 +1,5 @@
 const CONTENT_PATH = "assets/docs/site-content.json";
+const CONTENT_CACHE_KEY = "victoria-portfolio-content-v1";
 
 const yearNode = document.getElementById("year");
 if (yearNode) {
@@ -6,36 +7,35 @@ if (yearNode) {
 }
 
 function setText(id, value) {
-  if (!value) {
-    return;
-  }
-
   const node = document.getElementById(id);
   if (node) {
-    node.textContent = value;
+    if (typeof value === "string") {
+      node.textContent = value;
+    }
   }
 }
 
 function setHref(id, href) {
-  if (!href) {
-    return;
-  }
-
   const node = document.getElementById(id);
   if (node instanceof HTMLAnchorElement) {
-    node.href = href;
+    if (typeof href === "string" && href.trim()) {
+      node.href = href;
+    } else {
+      node.removeAttribute("href");
+    }
   }
 }
 
 function setImage(id, src, alt) {
-  if (!src) {
-    return;
-  }
-
   const node = document.getElementById(id);
   if (node instanceof HTMLImageElement) {
-    node.src = src;
-    if (alt) {
+    if (typeof src === "string" && src.trim()) {
+      node.src = src;
+    } else {
+      node.removeAttribute("src");
+    }
+
+    if (typeof alt === "string") {
       node.alt = alt;
     }
   }
@@ -54,16 +54,16 @@ function createGapYearBlurb(gapYear) {
 }
 
 function renderLogos(logos) {
-  if (!Array.isArray(logos)) {
-    return;
-  }
-
   const logoTrack = document.getElementById("experience-logos");
   if (!logoTrack) {
     return;
   }
 
   logoTrack.replaceChildren();
+  if (!Array.isArray(logos)) {
+    return;
+  }
+
   logos.forEach((logo) => {
     if (!logo?.src) {
       return;
@@ -73,21 +73,22 @@ function renderLogos(logos) {
     image.src = logo.src;
     image.alt = logo.alt || "Company logo";
     image.className = logo.className || "logo-item";
+    image.loading = "lazy";
+    image.decoding = "async";
     logoTrack.appendChild(image);
   });
 }
 
 function renderJobs(jobs) {
-  if (!Array.isArray(jobs)) {
-    return;
-  }
-
   const container = document.getElementById("experience-jobs");
   if (!container) {
     return;
   }
 
   container.replaceChildren();
+  if (!Array.isArray(jobs)) {
+    return;
+  }
 
   jobs.forEach((job) => {
     const card = document.createElement("article");
@@ -98,6 +99,8 @@ function renderJobs(jobs) {
       image.src = job.image;
       image.alt = job.imageAlt || `${job.company || "Job"} media`;
       image.className = "job-media";
+      image.loading = "lazy";
+      image.decoding = "async";
       card.appendChild(image);
     }
 
@@ -127,16 +130,15 @@ function renderJobs(jobs) {
 }
 
 function renderOrganizations(items) {
-  if (!Array.isArray(items)) {
-    return;
-  }
-
   const container = document.getElementById("organizations-grid");
   if (!container) {
     return;
   }
 
   container.replaceChildren();
+  if (!Array.isArray(items)) {
+    return;
+  }
 
   items.forEach((item) => {
     const card = document.createElement("article");
@@ -147,6 +149,8 @@ function renderOrganizations(items) {
       image.src = item.image;
       image.alt = item.imageAlt || `${item.name || "Organization"} media`;
       image.className = item.imageClass || "org-media";
+      image.loading = "lazy";
+      image.decoding = "async";
       card.appendChild(image);
     }
 
@@ -172,16 +176,16 @@ function renderOrganizations(items) {
 }
 
 function renderGapPhotos(photos) {
-  if (!Array.isArray(photos)) {
-    return;
-  }
-
   const collage = document.getElementById("gap-photos");
   if (!collage) {
     return;
   }
 
   collage.replaceChildren();
+  if (!Array.isArray(photos)) {
+    return;
+  }
+
   photos.forEach((photo) => {
     if (!photo?.src) {
       return;
@@ -191,6 +195,8 @@ function renderGapPhotos(photos) {
     image.src = photo.src;
     image.alt = photo.alt || "Gap year photo";
     image.className = "gap-photo";
+    image.loading = "lazy";
+    image.decoding = "async";
     collage.appendChild(image);
   });
 }
@@ -240,7 +246,34 @@ function applyContent(content) {
   setHref("footer-email", footer.contactEmail ? `mailto:${footer.contactEmail}` : "");
 }
 
+function readCachedContent() {
+  try {
+    const raw = window.localStorage.getItem(CONTENT_CACHE_KEY);
+    if (!raw) {
+      return null;
+    }
+
+    const parsed = JSON.parse(raw);
+    return parsed && typeof parsed === "object" ? parsed : null;
+  } catch {
+    return null;
+  }
+}
+
+function cacheContent(content) {
+  try {
+    window.localStorage.setItem(CONTENT_CACHE_KEY, JSON.stringify(content));
+  } catch {
+    // Ignore cache write issues (e.g., private browsing storage restrictions).
+  }
+}
+
 async function loadSiteContent() {
+  const cachedContent = readCachedContent();
+  if (cachedContent) {
+    applyContent(cachedContent);
+  }
+
   try {
     const response = await fetch(CONTENT_PATH, { cache: "no-store" });
     if (!response.ok) {
@@ -249,7 +282,13 @@ async function loadSiteContent() {
 
     const content = await response.json();
     applyContent(content);
+    cacheContent(content);
   } catch (error) {
+    if (cachedContent) {
+      console.warn("Could not load CMS content file. Using cached content instead.", error);
+      return;
+    }
+
     console.warn("Using fallback inline content. Could not load CMS content file.", error);
   }
 }
