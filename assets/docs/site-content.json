@@ -98,7 +98,7 @@
       {
         "name": "Alpha Kappa Psi Fraternity",
         "meta": "Executive President | Richmond, VA",
-        "image": "assets/media/organizations/akpsi-eboard.jpeg",
+        "image": "assets/media/eboard.png",
         "imageAlt": "Organization leadership media",
         "cardClass": "org-card org-card-akpsi",
         "imageClass": "org-media org-media-akpsi",
@@ -147,6 +147,6 @@
     "blurb": "Before college, I spent a year living in Hawaii and Colombia, volunteering and working with local organizations to give back to the communities that welcomed me. In Hawaii, I participated in beach and trail cleanups, working alongside conservation groups to preserve the natural spaces that locals and visitors depend on. In Colombia, I taught English through community education programs, helping open doors for people in communities where language access makes a real difference. That year taught me how to connect with people from all walks of life, how to show up for something bigger than yourself, and how to find purpose in the everyday effort of building something good. It is not something I talk about often, but it shaped who I am more than I can put into words."
   },
   "footer": {
-    "contactEmail": "nguyent58@vcu.edu"
+    "contactEmail": "victorianguyen695@gmail.com"
   }
 }
