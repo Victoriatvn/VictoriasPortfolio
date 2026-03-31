@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+*.swp
+
+# Node/npm (if using build tools)
+node_modules/
+npm-debug.log
+package-lock.json
+yarn.lock
+
+# Environment files
+.env
+.env.local
+.env*.local
+
+# IDE/Editor
+.vscode/settings.json
+.idea/
+*.sublime-workspace
+
+# OS temp files
+Thumbs.db
+.DS_Store
+
+# Build/dist folders (if applicable)
+dist/
+build/
+assets/docs/.IMAGE_SIZING_GUIDE.md
