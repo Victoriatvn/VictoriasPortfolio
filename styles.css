@@ -1,13 +1,15 @@
 :root {
-  --bg: #f4f9ff;
+  --bg: #f5f6f8;
   --surface: #ffffff;
-  --surface-2: #eaf4ff;
-  --primary: #0d4fd8;
-  --primary-deep: #08348f;
-  --text: #12213f;
-  --muted: #4f658f;
-  --line: #cddcf3;
-  --shadow: 0 16px 40px rgba(13, 79, 216, 0.12);
+  --surface-2: #eef1f5;
+  --primary: #1f3a5f;
+  --primary-2: #2c4d78;
+  --primary-deep: #132742;
+  --on-primary: #ffffff;
+  --text: #1f2937;
+  --muted: #5f6b7a;
+  --line: #d7dde6;
+  --shadow: 0 14px 32px rgba(16, 24, 40, 0.1);
   --radius: 18px;
 }
 
@@ -21,12 +23,12 @@ html {
 
 body {
   margin: 0;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Neue Haas Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at 15% 20%, rgba(13, 79, 216, 0.16), transparent 42%),
-    radial-gradient(circle at 85% 5%, rgba(8, 52, 143, 0.14), transparent 32%),
-    linear-gradient(160deg, #f7fbff 0%, #edf5ff 45%, #f4f9ff 100%);
+    radial-gradient(circle at 15% 20%, rgba(31, 58, 95, 0.1), transparent 42%),
+    radial-gradient(circle at 85% 5%, rgba(95, 107, 122, 0.08), transparent 32%),
+    linear-gradient(160deg, #f8f9fb 0%, #f2f5f8 45%, #edf1f5 100%);
   min-height: 100vh;
 }
 
@@ -44,12 +46,12 @@ a {
   align-items: center;
   padding: 0.9rem 4vw;
   backdrop-filter: blur(8px);
-  background: rgba(244, 249, 255, 0.74);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-2) 100%);
   animation: fade-in 800ms ease forwards;
 }
 
 .brand {
-  font-family: "Lora", serif;
+  color: var(--on-primary);
   font-weight: 700;
   letter-spacing: 0.02em;
 }
@@ -61,12 +63,12 @@ a {
 }
 
 .top-nav nav a {
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 600;
 }
 
 .top-nav nav a:hover {
-  color: var(--primary-deep);
+  color: var(--on-primary);
 }
 
 main,
@@ -85,7 +87,6 @@ main,
 }
 
 .eyebrow {
-  font-family: "Source Sans 3", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--primary);
@@ -100,13 +101,11 @@ h3 {
 }
 
 h1 {
-  font-family: "Lora", serif;
   font-size: clamp(2rem, 4vw, 3.1rem);
   margin-bottom: 0.8rem;
 }
 
 h2 {
-  font-family: "Lora", serif;
   font-size: clamp(1.45rem, 2.5vw, 2rem);
   margin-bottom: 0.6rem;
 }
@@ -136,9 +135,9 @@ h2 {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary) 0%, #2f7aff 100%);
-  color: #fff;
-  box-shadow: 0 8px 26px rgba(13, 79, 216, 0.26);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-2) 100%);
+  color: var(--on-primary);
+  box-shadow: 0 8px 22px rgba(31, 58, 95, 0.22);
 }
 
 .btn-secondary {
@@ -156,7 +155,7 @@ h2 {
   width: min(360px, 90%);
   border-radius: 28px;
   padding: 0.8rem;
-  background: linear-gradient(145deg, rgba(13, 79, 216, 0.19), rgba(13, 79, 216, 0.03));
+  background: linear-gradient(145deg, rgba(31, 58, 95, 0.16), rgba(31, 58, 95, 0.04));
   box-shadow: var(--shadow);
 }
 
@@ -225,7 +224,7 @@ h2 {
   background: var(--surface);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 8px 18px rgba(13, 79, 216, 0.06);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
 }
 
 .job-card .card-body {
@@ -277,16 +276,16 @@ h2 {
   min-height: 176px;
   display: grid;
   place-items: center;
-  color: #4266a7;
+  color: var(--primary-deep);
   font-weight: 700;
   background:
-    linear-gradient(145deg, rgba(13, 79, 216, 0.14), rgba(13, 79, 216, 0.05)),
+    linear-gradient(145deg, rgba(31, 58, 95, 0.11), rgba(31, 58, 95, 0.04)),
     repeating-linear-gradient(
       45deg,
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.4) 10px,
-      rgba(234, 244, 255, 0.7) 10px,
-      rgba(234, 244, 255, 0.7) 20px
+      rgba(255, 255, 255, 0.55),
+      rgba(255, 255, 255, 0.55) 10px,
+      rgba(238, 241, 245, 0.75) 10px,
+      rgba(238, 241, 245, 0.75) 20px
     );
 }
 
@@ -489,11 +488,6 @@ h2 {
 
   .hero {
     padding-top: 2.4rem;
-  }
-
-  .gap-year-container {
-    grid-template-columns: 1fr;
-    gap: 1.6rem;
   }
 
   .gap-collage {

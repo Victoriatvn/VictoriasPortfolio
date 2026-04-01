@@ -6,11 +6,13 @@ if (yearNode) {
   yearNode.textContent = String(new Date().getFullYear());
 }
 
-function setText(id, value) {
+function setText(id, value, options = {}) {
+  const { allowEmpty = false } = options;
   const node = document.getElementById(id);
-  if (node) {
-    if (typeof value === "string") {
-      node.textContent = value;
+  if (node && typeof value === "string") {
+    const normalized = value.trim();
+    if (allowEmpty || normalized) {
+      node.textContent = normalized;
     }
   }
 }
@@ -219,7 +221,7 @@ function applyContent(content) {
   setText("footer-name", content.siteName);
 
   const hero = content.hero || {};
-  setText("hero-eyebrow", hero.eyebrow);
+  setText("hero-eyebrow", hero.eyebrow, { allowEmpty: true });
   setText("hero-title", hero.title);
   setText("hero-intro", hero.intro);
   setHref("hero-linkedin", hero.linkedinUrl);
