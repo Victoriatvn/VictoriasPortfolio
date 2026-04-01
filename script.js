@@ -43,6 +43,31 @@ function setImage(id, src, alt) {
   }
 }
 
+function renderParagraphBlocks(id, value) {
+  const node = document.getElementById(id);
+  if (!node || typeof value !== "string") {
+    return;
+  }
+
+  const normalized = value.trim();
+  if (!normalized) {
+    return;
+  }
+
+  const blocks = normalized
+    .split(/\n\s*\n/)
+    .map((block) => block.replace(/\n+/g, " ").trim())
+    .filter(Boolean);
+
+  node.replaceChildren();
+
+  blocks.forEach((block) => {
+    const paragraph = document.createElement("p");
+    paragraph.textContent = block;
+    node.appendChild(paragraph);
+  });
+}
+
 function createJobBlurb(job) {
   return typeof job?.blurb === "string" ? job.blurb.trim() : "";
 }
@@ -223,7 +248,7 @@ function applyContent(content) {
   const hero = content.hero || {};
   setText("hero-eyebrow", hero.eyebrow, { allowEmpty: true });
   setText("hero-title", hero.title);
-  setText("hero-intro", hero.intro);
+  renderParagraphBlocks("hero-intro", hero.intro);
   setHref("hero-linkedin", hero.linkedinUrl);
   setHref("hero-resume", hero.resumePath);
   setHref("hero-email", hero.email ? `mailto:${hero.email}` : "");

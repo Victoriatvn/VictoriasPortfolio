@@ -115,6 +115,14 @@ h2 {
   line-height: 1.7;
 }
 
+.hero-intro p {
+  margin: 0 0 0.9rem;
+}
+
+.hero-intro p:last-child {
+  margin-bottom: 0;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
