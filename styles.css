@@ -349,9 +349,11 @@ h2 {
 }
 
 .gap-what {
-  background: var(--surface-2);
+  background: var(--surface);
+  border: 1px solid var(--line);
   border-radius: 14px;
   padding: 1.2rem;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
 }
 
 .gap-what h3 {
